@@ -28,7 +28,7 @@ hist(sumperday$steps, xlab="Steps", main = "Histogram of the number of steps")
 ###Mean and median steps
 On average, this person had `r mean(sumperday$steps, na.rm = TRUE)` steps per day (median: `r median(sumperday$steps, na.rm = TRUE)` steps).
 
-If you want to see the code used to calculate those numbers:
+If you want to see the code used to calculate those numbers, this was the code I used in-line:
 ```{r means}
 #mean(sumperday$steps, na.rm = TRUE)
 #median(sumperday$steps, na.rm = TRUE)
@@ -46,7 +46,7 @@ contains the maximum number of steps?
 
 The `r av.int$interval[max(av.int$steps)]` interval had the maximum number of steps. 
 
-If you want to see the code used to calculate those numbers:
+If you want to see the code used to calculate those numbers, this was the code I used in-line::
 ```{r int.max}
 #av.int$interval[max(av.int$steps)]
 ```
@@ -55,6 +55,7 @@ If you want to see the code used to calculate those numbers:
 In total, there were `r sum(is.na(act))` missing values in the dataset. I replaced the missing values with a glm model of interval and daynumber. 
 
 ```{r fillin}
+#in-line above:
 #r sum(is.na(act)) Find the number of missing values
 
 library(lubridate)
